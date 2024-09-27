@@ -1,12 +1,14 @@
 import 'package:amal_pay_app/constants.dart';
 import 'package:amal_pay_app/core/utils/app_icons_svg.dart';
 import 'package:amal_pay_app/core/widgets/custom_buttom.dart';
+import 'package:amal_pay_app/features/auth/presentation/views/otp_verification_view.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_circle_precent_indicator.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_confirmation_condition.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_drop_down_button_with_title.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_logo_auth.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_text_form_field_with_title.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ContentSignUpStepTwoView extends StatelessWidget {
   const ContentSignUpStepTwoView({super.key});
@@ -67,7 +69,9 @@ class ContentSignUpStepTwoView extends StatelessWidget {
               const SizedBox(height: 25),
               CustomButton(
                 title: 'إنشاء حساب',
-                onTap: () {},
+                onTap: () {
+                  GoRouter.of(context).push(OtpVerificationView.path);
+                },
               ),
             ],
           ),

@@ -9,4 +9,5 @@ abstract class AppIconsSvg {
   static String envelope = 'assets/images/svg/envelope.svg';
   static String location = 'assets/images/svg/location.svg';
   static String phone = 'assets/images/svg/phone.svg';
+  static String goBack = 'assets/images/svg/go_back.svg';
 }

@@ -19,13 +19,16 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
+          disabledBackgroundColor: AppColors.disabledButton,
           backgroundColor: isBackgroundTransparent
               ? Colors.transparent
               : AppColors.primaryColor,
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
           shape: RoundedRectangleBorder(
-            side: const BorderSide(
-              color: AppColors.primaryColor,
+            side: BorderSide(
+              color: onTap == null
+                  ? AppColors.disabledButton
+                  : AppColors.primaryColor,
             ),
             borderRadius: BorderRadius.circular(30),
           ),
@@ -34,7 +37,7 @@ class CustomButton extends StatelessWidget {
           title,
           style: Styles.style16.copyWith(
             fontWeight: FontWeight.bold,
-            color: Colors.white,
+            color: onTap == null ? AppColors.disabledButtonText : Colors.white,
           ),
         ),
       ),

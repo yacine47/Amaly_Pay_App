@@ -1,3 +1,4 @@
+import 'package:amal_pay_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 abstract class Styles {
@@ -26,7 +27,8 @@ abstract class Styles {
 
   static TextStyle style18 = const TextStyle(
     fontSize: 18,
-    fontWeight: FontWeight.w300,
+    fontWeight: FontWeight.w600,
+    color: AppColors.titleViews,
   );
   static TextStyle style16 = const TextStyle(
     fontSize: 16,
