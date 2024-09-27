@@ -2,6 +2,7 @@ import 'package:amal_pay_app/constants.dart';
 import 'package:amal_pay_app/core/utils/app_icons_svg.dart';
 import 'package:amal_pay_app/core/widgets/custom_buttom.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/login_view.dart';
+import 'package:amal_pay_app/features/auth/presentation/views/sign_up_step_two_view.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_chose_gendre.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_circle_precent_indicator.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_drop_down_button_with_title.dart';
@@ -11,8 +12,8 @@ import 'package:amal_pay_app/features/auth/presentation/views/widgets/go_to_anot
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class ContentSignUpView extends StatelessWidget {
-  const ContentSignUpView({super.key});
+class ContentSignUpStepOneView extends StatelessWidget {
+  const ContentSignUpStepOneView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +26,7 @@ class ContentSignUpView extends StatelessWidget {
             children: [
               SizedBox(
                 width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height * .08,
+                height: MediaQuery.of(context).size.height * .065,
               ),
               const CustomCirclePercentIndicator(
                 percent: .5,
@@ -63,7 +64,9 @@ class ContentSignUpView extends StatelessWidget {
               const SizedBox(height: 29),
               CustomButton(
                 title: 'إنشاء حساب',
-                onTap: () {},
+                onTap: () {
+                  GoRouter.of(context).push(SignUpStepTwoView.path);
+                },
               ),
               const SizedBox(height: 10),
               GoToAnotherOperation(

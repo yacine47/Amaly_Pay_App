@@ -3,11 +3,17 @@ import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_dro
 import 'package:flutter/material.dart';
 
 class CustomDropDownButtonWithTitle extends StatelessWidget {
-  const CustomDropDownButtonWithTitle({super.key, required this.title, required this.hintTextDropDownButton, required this.items, required this.onChanged});
+  const CustomDropDownButtonWithTitle(
+      {super.key,
+      required this.title,
+      required this.hintTextDropDownButton,
+      required this.items,
+      required this.onChanged, this.icon});
   final String title;
   final String hintTextDropDownButton;
   final List<String> items;
   final void Function(String?) onChanged;
+  final String? icon;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -26,6 +32,7 @@ class CustomDropDownButtonWithTitle extends StatelessWidget {
         CustomDropdownButton(
           hintText: hintTextDropDownButton,
           items: items,
+          icon: icon,
           onChanged: onChanged,
         ),
       ],

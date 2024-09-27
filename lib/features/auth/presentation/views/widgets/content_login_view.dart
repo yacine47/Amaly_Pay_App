@@ -1,7 +1,7 @@
 import 'package:amal_pay_app/constants.dart';
 import 'package:amal_pay_app/core/utils/app_icons_svg.dart';
 import 'package:amal_pay_app/core/widgets/custom_buttom.dart';
-import 'package:amal_pay_app/features/auth/presentation/views/sign_up_view.dart';
+import 'package:amal_pay_app/features/auth/presentation/views/sign_up_step_one_view.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_logo_auth.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_text_form_field_with_title.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/go_to_another_operation.dart';
@@ -46,7 +46,7 @@ class ContentLoginView extends StatelessWidget {
               spanText: 'إنشاء حساب',
               onTap: () {
                 GoRouter.of(context).pop();
-                GoRouter.of(context).push(SignUpView.path);
+                GoRouter.of(context).push(SignUpStepOneView.path);
               },
             ),
           ],

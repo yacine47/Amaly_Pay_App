@@ -1,5 +1,6 @@
 import 'package:amal_pay_app/features/auth/presentation/views/login_view.dart';
-import 'package:amal_pay_app/features/auth/presentation/views/sign_up_view.dart';
+import 'package:amal_pay_app/features/auth/presentation/views/sign_up_step_one_view.dart';
+import 'package:amal_pay_app/features/auth/presentation/views/sign_up_step_two_view.dart';
 import 'package:amal_pay_app/features/intoduction/presentation/introduction_view.dart';
 import 'package:amal_pay_app/features/intoduction/presentation/welcome_view.dart';
 import 'package:amal_pay_app/features/splash/presentation/views/splash_view.dart';
@@ -36,8 +37,12 @@ abstract class AppRouter {
         builder: (context, state) => const LoginView(),
       ),
       GoRoute(
-        path: SignUpView.path,
-        builder: (context, state) => const SignUpView(),
+        path: SignUpStepOneView.path,
+        builder: (context, state) => const SignUpStepOneView(),
+      ),
+      GoRoute(
+        path: SignUpStepTwoView.path,
+        builder: (context, state) => const SignUpStepTwoView(),
       ),
     ],
   );
