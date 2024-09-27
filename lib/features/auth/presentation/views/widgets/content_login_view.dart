@@ -1,10 +1,12 @@
 import 'package:amal_pay_app/constants.dart';
 import 'package:amal_pay_app/core/utils/app_icons_svg.dart';
 import 'package:amal_pay_app/core/widgets/custom_buttom.dart';
+import 'package:amal_pay_app/features/auth/presentation/views/sign_up_view.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_logo_auth.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_text_form_field_with_title.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/go_to_another_operation.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ContentLoginView extends StatelessWidget {
   const ContentLoginView({super.key});
@@ -35,14 +37,17 @@ class ContentLoginView extends StatelessWidget {
             ),
             const SizedBox(height: 29),
             CustomButton(
-              title: 'تسجيل دخول ',
+              title: 'تسجيل دخول',
               onTap: () {},
             ),
             const SizedBox(height: 10),
             GoToAnotherOperation(
-              mainText: 'ليس لدي حساب ? ',
+              mainText: 'ليس لديك حساب ؟   ',
               spanText: 'إنشاء حساب',
-              onTap: () {},
+              onTap: () {
+                GoRouter.of(context).pop();
+                GoRouter.of(context).push(SignUpView.path);
+              },
             ),
           ],
         ),

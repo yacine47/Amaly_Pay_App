@@ -17,22 +17,24 @@ class GoToAnotherOperation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RichText(
-      text: TextSpan(
-        text: mainText,
-        style: Styles.style16.copyWith(
-          color: Colors.white,
-          fontFamily: AppFonts.cairo,
-        ), // Normal text style
-        children: [
-          TextSpan(
-            text: spanText,
-            style: Styles.style16.copyWith(
-              color: AppColors.primaryColor,
-            ),
-            recognizer: TapGestureRecognizer()..onTap = () {},
+    return Center(
+      child: RichText(
+        text: TextSpan(
+          text: mainText,
+          style: Styles.style16.copyWith(
+            color: Colors.white,
+            fontFamily: AppFonts.cairo,
           ),
-        ],
+          children: [
+            TextSpan(
+              text: spanText,
+              style: Styles.style16.copyWith(
+                color: AppColors.primaryColor,
+              ),
+              recognizer: TapGestureRecognizer()..onTap = onTap,
+            ),
+          ],
+        ),
       ),
     );
   }

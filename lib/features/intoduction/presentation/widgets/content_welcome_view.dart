@@ -2,6 +2,7 @@ import 'package:amal_pay_app/core/utils/styles.dart';
 import 'package:amal_pay_app/core/widgets/custom_buttom.dart';
 import 'package:amal_pay_app/core/widgets/custom_logo_app.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/login_view.dart';
+import 'package:amal_pay_app/features/auth/presentation/views/sign_up_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -38,7 +39,9 @@ class ContentWelcomeView extends StatelessWidget {
             const SizedBox(height: 16),
             CustomButton(
               title: 'إنشاء حساب',
-              onTap: () {},
+              onTap: () {
+                GoRouter.of(context).push(SignUpView.path);
+              },
             ),
             const SizedBox(height: 16),
             CustomButton(
