@@ -1,0 +1,59 @@
+import 'package:flutter/material.dart';
+
+abstract class Styles {
+  static TextStyle style36 = const TextStyle(
+    fontSize: 36,
+    fontWeight: FontWeight.bold,
+  );
+
+  static TextStyle style32 = const TextStyle(
+    fontSize: 32,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle style28 = const TextStyle(
+    fontSize: 28,
+    fontWeight: FontWeight.bold,
+  );
+
+  static TextStyle style24 = const TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w800,
+  );
+  static TextStyle style20 = const TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+  );
+
+  static TextStyle style18 = const TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w300,
+  );
+  static TextStyle style16 = const TextStyle(
+    fontSize: 16,
+  );
+
+  static TextStyle style15 = const TextStyle(
+    fontSize: 15,
+  );
+  static TextStyle style14 = const TextStyle(
+    fontSize: 14,
+  );
+  static TextStyle style13 = const TextStyle(
+    fontSize: 13,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle style12 = const TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.bold,
+  );
+
+  static TextStyle style10 = const TextStyle(
+    fontSize: 10,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle style08 = const TextStyle(
+    fontSize: 9,
+    color: Colors.white,
+    fontWeight: FontWeight.w500,
+  );
+}

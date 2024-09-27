@@ -1,0 +1,52 @@
+import 'package:amal_pay_app/constants.dart';
+import 'package:amal_pay_app/core/utils/app_icons_svg.dart';
+import 'package:amal_pay_app/core/widgets/custom_buttom.dart';
+import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_logo_auth.dart';
+import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_text_form_field_with_title.dart';
+import 'package:amal_pay_app/features/auth/presentation/views/widgets/go_to_another_operation.dart';
+import 'package:flutter/material.dart';
+
+class ContentLoginView extends StatelessWidget {
+  const ContentLoginView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned.fill(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: kPaddingHorizontal),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(width: MediaQuery.of(context).size.width),
+            const CustomLogoAuth(),
+            const SizedBox(height: 29),
+            CustomTextFormFieldWithTitle(
+              title: 'الإسم الرباعي',
+              hintTextFormField: 'رجاءا اكتب اسمك',
+              iconTextFormField: AppIconsSvg.person,
+            ),
+            const SizedBox(height: 16),
+            CustomTextFormFieldWithTitle(
+              title: 'الرقم السري ',
+              hintTextFormField: '************',
+              obscureText: true,
+              iconTextFormField: AppIconsSvg.lock,
+            ),
+            const SizedBox(height: 29),
+            CustomButton(
+              title: 'تسجيل دخول ',
+              onTap: () {},
+            ),
+            const SizedBox(height: 10),
+            GoToAnotherOperation(
+              mainText: 'ليس لدي حساب ? ',
+              spanText: 'إنشاء حساب',
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
