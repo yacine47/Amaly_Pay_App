@@ -1,22 +1,20 @@
-
-
-
 import 'package:amal_pay_app/core/utils/app_colors.dart';
 import 'package:amal_pay_app/core/utils/styles.dart';
+import 'package:amal_pay_app/core/widgets/title_items.dart';
 import 'package:flutter/material.dart';
 
 class CustomTitleHistoryHomeView extends StatelessWidget {
   const CustomTitleHistoryHomeView({
-    super.key, this.onTap,
+    super.key,
+    this.onTap,
   });
   final VoidCallback? onTap;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(
-          'سجل الحوالات المرسلة ',
-          style: Styles.style17,
+        const TitleItems(
+          title: 'سجل الحوالات المرسلة ',
         ),
         const Spacer(),
         GestureDetector(

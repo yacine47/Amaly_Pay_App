@@ -1,5 +1,5 @@
-import 'package:amal_pay_app/features/home/presentation/views/widgets/custom_app_bar_home_view.dart';
-import 'package:amal_pay_app/features/home/presentation/views/widgets/transaction_sent_history.dart';
+import 'package:amal_pay_app/features/setting/presentation/views/widgets/custom_app_bar_setting_view.dart';
+import 'package:amal_pay_app/features/setting/presentation/views/widgets/setting_item_card_list_view.dart';
 import 'package:flutter/material.dart';
 
 class SettingViewBody extends StatelessWidget {
@@ -12,8 +12,9 @@ class SettingViewBody extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: const [
-            CustomAppBarHomeView(),
-            TransactionSentHistory(),
+            CustomAppBarSettingView(),
+            SizedBox(height: 13),
+            SettingItemCardListView(),
           ],
         ));
   }

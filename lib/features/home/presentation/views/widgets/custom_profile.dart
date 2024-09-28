@@ -1,54 +1,35 @@
-import 'package:amal_pay_app/core/utils/app_assets.dart';
-import 'package:amal_pay_app/core/utils/app_icons_svg.dart';
-import 'package:amal_pay_app/core/utils/styles.dart';
+import 'package:amal_pay_app/core/widgets/custom_photo_profile.dart';
+import 'package:amal_pay_app/features/home/presentation/views/widgets/profile_name_user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CustomProfile extends StatelessWidget {
   const CustomProfile({
     super.key,
+    required this.icon,
+    this.onTap,
   });
+
+  final String icon;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CircleAvatar(
-          radius: 30,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(555),
-            child: Image.asset(
-              AppAssets.photoProfile,
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
+        const CustomPhotoProfile(),
         const SizedBox(width: 16),
-        SizedBox(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'صباح الخير ',
-                style: Styles.style14.copyWith(
-                  color: Colors.white,
-                ),
-              ),
-              const SizedBox(height: 5),
-              Text(
-                'خالد محمد احمد',
-                style: Styles.style14.copyWith(
-                  color: Colors.white,
-                ),
-              ),
-            ],
-          ),
-        ),
+        const ProfileNameUser(),
         const Spacer(),
-        SvgPicture.asset(
-          AppIconsSvg.notification,
-          width: 24,
-          height: 24,
+        GestureDetector(
+          onTap: onTap,
+          child: SvgPicture.asset(icon,
+              width: 24,
+              height: 24,
+              colorFilter: const ColorFilter.mode(
+                Colors.white,
+                BlendMode.srcIn,
+              )),
         ),
       ],
     );

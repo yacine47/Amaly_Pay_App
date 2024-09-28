@@ -53,7 +53,7 @@ class TransactionSentHistoryCard extends StatelessWidget {
               ),
             ),
             Text(
-              '400 JOD',
+              'JOD 400',
               style: Styles.style16.copyWith(
                 color: AppColors.titleItems2,
                 fontFamily: AppFonts.rubik,

@@ -7,4 +7,5 @@ abstract class AppAssets {
   static String authScreenImage = 'assets/images/auth_background_image.png';
 
   static String photoProfile = 'assets/images/photo_profile.png';
+  static String rectangleProfile = 'assets/images/rectangle_profile.png';
 }

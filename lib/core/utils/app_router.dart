@@ -5,6 +5,7 @@ import 'package:amal_pay_app/features/auth/presentation/views/sign_up_step_two_v
 import 'package:amal_pay_app/features/home/presentation/views/home_view.dart';
 import 'package:amal_pay_app/features/intoduction/presentation/introduction_view.dart';
 import 'package:amal_pay_app/features/intoduction/presentation/welcome_view.dart';
+import 'package:amal_pay_app/features/sent_amount/presentation/views/sent_amount_view.dart';
 import 'package:amal_pay_app/features/splash/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -54,6 +55,14 @@ abstract class AppRouter {
         path: HomeView.path,
         builder: (context, state) => const HomeView(),
       ),
+
+        GoRoute(
+        path: SentAmountView.path,
+        builder: (context, state) => const SentAmountView(),
+      ),
+
+
+      
     ],
   );
 }
