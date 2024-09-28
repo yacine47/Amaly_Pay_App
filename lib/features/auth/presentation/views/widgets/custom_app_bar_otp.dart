@@ -19,15 +19,14 @@ class CustomAppBarOtp extends StatelessWidget {
           icon: SvgPicture.asset(
             AppIconsSvg.goBack,
             width: 19.64,
+            height: 24,
           ),
         ),
         Text(
           'إنشاء حساب',
           style: Styles.style18,
         ),
-        const SizedBox(
-          width: 30,
-        )
+        const SizedBox(width: 30)
       ],
     );
   }

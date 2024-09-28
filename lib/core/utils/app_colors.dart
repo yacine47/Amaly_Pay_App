@@ -17,4 +17,5 @@ abstract class AppColors {
   static const Color bodyFont = Color(0xff2D2C2C);
   static const Color disabledButton = Color(0xffF1F1F1);
   static const Color disabledButtonText = Color(0xffABBED1);
+  static const Color borderPinPut = Color(0xffDDDDDD);
 }

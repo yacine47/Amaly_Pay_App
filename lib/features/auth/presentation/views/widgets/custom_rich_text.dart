@@ -39,7 +39,7 @@ class CustomRichText extends StatelessWidget {
               recognizer: TapGestureRecognizer()..onTap = onTap,
             ),
             TextSpan(
-              text: spanText,
+              text: continurMainText,
               style: Styles.style14.copyWith(
                 color: AppColors.grey2,
                 fontWeight: FontWeight.w500,
