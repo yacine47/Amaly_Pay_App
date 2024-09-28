@@ -2,6 +2,7 @@ import 'package:amal_pay_app/features/auth/presentation/views/login_view.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/otp_verification_view.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/sign_up_step_one_view.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/sign_up_step_two_view.dart';
+import 'package:amal_pay_app/features/home/presentation/views/home_view.dart';
 import 'package:amal_pay_app/features/intoduction/presentation/introduction_view.dart';
 import 'package:amal_pay_app/features/intoduction/presentation/welcome_view.dart';
 import 'package:amal_pay_app/features/splash/presentation/views/splash_view.dart';
@@ -48,6 +49,10 @@ abstract class AppRouter {
       GoRoute(
         path: OtpVerificationView.path,
         builder: (context, state) => const OtpVerificationView(),
+      ),
+      GoRoute(
+        path: HomeView.path,
+        builder: (context, state) => const HomeView(),
       ),
     ],
   );

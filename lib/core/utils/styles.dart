@@ -30,6 +30,11 @@ abstract class Styles {
     fontWeight: FontWeight.w600,
     color: AppColors.titleViews,
   );
+  static TextStyle style17 = const TextStyle(
+    fontSize: 17,
+    color: AppColors.titleItems,
+    fontWeight: FontWeight.w600,
+  );
   static TextStyle style16 = const TextStyle(
     fontSize: 16,
   );
@@ -43,7 +48,7 @@ abstract class Styles {
   );
   static TextStyle style13 = const TextStyle(
     fontSize: 13,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w500,
   );
   static TextStyle style12 = const TextStyle(
     fontSize: 12,

@@ -6,7 +6,9 @@ import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_app
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_pin_put.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_rich_text.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/reset_send_message_widget.dart';
+import 'package:amal_pay_app/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class OtpVerificationViewBody extends StatefulWidget {
   const OtpVerificationViewBody({super.key});
@@ -67,7 +69,11 @@ class _OtpVerificationViewBodyState extends State<OtpVerificationViewBody> {
             SizedBox(height: MediaQuery.of(context).size.height * .06),
             CustomButton(
               title: 'التحقق من الرقم',
-              onTap: isButtonEnabled ? () {} : null,
+              onTap: isButtonEnabled
+                  ? () {
+                      GoRouter.of(context).go(HomeView.path);
+                    }
+                  : null,
             ),
           ],
         ),

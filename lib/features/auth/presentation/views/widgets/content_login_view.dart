@@ -5,6 +5,7 @@ import 'package:amal_pay_app/features/auth/presentation/views/sign_up_step_one_v
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_logo_auth.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/custom_text_form_field_with_title.dart';
 import 'package:amal_pay_app/features/auth/presentation/views/widgets/go_to_another_operation.dart';
+import 'package:amal_pay_app/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -38,7 +39,9 @@ class ContentLoginView extends StatelessWidget {
             const SizedBox(height: 29),
             CustomButton(
               title: 'تسجيل دخول',
-              onTap: () {},
+              onTap: () {
+                GoRouter.of(context).go(HomeView.path);
+              },
             ),
             const SizedBox(height: 10),
             GoToAnotherOperation(
